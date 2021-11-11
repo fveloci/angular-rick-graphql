@@ -1,9 +1,0 @@
-<div class="container">
-  <h1>Rick and Morty Characters - Page: {{page}}</h1>
-  <button (click)="beforePage()">Before Page</button><button (click)="nextPage()">Next Page</button><button (click)="firstPage()">First Page</button>
-  <app-character-list *ngIf="isLoaded" [characters]="characters.data.characters.results"></app-character-list>
-  <div class="loader" *ngIf="!isLoaded">
-    <app-spinner></app-spinner>
-  </div>
-</div>
-
