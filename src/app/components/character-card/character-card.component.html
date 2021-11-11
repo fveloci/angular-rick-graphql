@@ -1,0 +1,21 @@
+<div class="card" [routerLink]="['character', character.id]">
+  <figure class="card__picture">
+    <img class="card__img" src="{{character.image}}" alt="Image">
+  </figure>
+  <div class="card__texts">
+    <div class="card__name">
+      <h1>{{character.name}}</h1>
+    </div>
+    <div class="card__specie">
+      <span>Specie: {{character.species}}</span>
+    </div>
+    <div class="card__info">
+      <div class="card__genre">
+      <span>{{character.gender}} |</span>
+      </div>
+      <div class="card__status">
+        <span [ngClass]="{dead: character.status == 'Dead',alive: character.status == 'Alive'}">{{character.status}}</span>
+      </div>
+    </div>
+  </div>
+</div>

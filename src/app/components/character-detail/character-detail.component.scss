@@ -1,0 +1,50 @@
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 30px;
+}
+.detail__img {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 20px 20px 0 0;
+}
+.detail__texts {
+  background: radial-gradient(#76b2fe, #b69efe);
+  padding: 20px;
+  width: 100%;
+  border-radius: 0 0 20px 20px;
+}
+.detail__name {
+  text-align: center;
+}
+.alive {
+  color: lime;
+}
+.dead {
+  color: red;
+}
+.loader {
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+}
+.detail__episodes {
+  font-size: medium;
+}
+.detail__episodes ul,li {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+.detail__episodes li {
+  margin: 10px 0;
+}
+.even {
+  color: white;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 40%;
+  }
+}

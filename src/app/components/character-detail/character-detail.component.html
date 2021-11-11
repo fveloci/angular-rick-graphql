@@ -1,0 +1,29 @@
+<div class="loader" *ngIf="!isLoaded">
+  <app-spinner></app-spinner>
+</div>
+<div class="container" *ngIf="isLoaded">
+  <div class="detail">
+
+    <figure class="detail__picture">
+      <img class="detail__img" src="{{character.image}}" alt="">
+    </figure>
+    <div class="detail__texts">
+      <div class="detail__name">
+        <h1>{{character.name}}</h1>
+      </div>
+      <div class="detail__species">
+        <h3>Specie: <span>{{character.species}}</span></h3>
+      </div>
+      <div class="detail__status">
+        <h3>Status: <span [ngClass]="{alive: character.status == 'Alive', dead: character.status == 'Dead'}">{{character.status}}</span></h3>
+      </div>
+      <div class="detail__episodes">
+        <h3>Episodes:</h3>
+        <ul>
+          <li *ngFor="let episode of character.episode; let i = index" [ngClass]="{even: i%2 == 0}">{{episode.episode+" - "+ episode.name}}</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
