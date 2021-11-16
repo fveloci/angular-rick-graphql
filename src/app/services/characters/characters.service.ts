@@ -16,7 +16,7 @@ export class CharactersService {
     const characters = await this.apollo.query({
       query: gql `
       {
-        characters(page: ${page}) {
+        characters(page: ${page}, filter: {name: "${filter}"}) {
           info {
             count
             pages
@@ -57,4 +57,5 @@ export class CharactersService {
     }).toPromise();
     return character;
   }
+
 }
