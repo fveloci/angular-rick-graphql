@@ -12,6 +12,8 @@ import { CharacterListComponent } from './components/character-list/character-li
 import { CharacterCardComponent } from './components/character-card/character-card.component';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { CharacterDetailComponent } from './components/character-detail/character-detail.component';
+import { SearchCharacterComponent } from './components/search-character/search-character.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,13 +24,15 @@ import { CharacterDetailComponent } from './components/character-detail/characte
     CharacterListComponent,
     CharacterCardComponent,
     SpinnerComponent,
-    CharacterDetailComponent
+    CharacterDetailComponent,
+    SearchCharacterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     GraphQLModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

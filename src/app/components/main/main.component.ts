@@ -49,4 +49,10 @@ export class MainComponent implements OnInit {
     this.getCharacters();
   }
 
+  setFilter($event: string) {
+    this.filter = $event;
+    this.page = 1;
+    this.getCharacters();
+  }
+
 }
